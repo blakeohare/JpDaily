@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JP Daily</title>
+    <script src="code.js"></script>
+    <script src="wordbank.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div id="card-picker-host">
+      Set: <select id="set-picker"></select>
+      &nbsp; &nbsp; &nbsp;
+      Front side: <select id="side-picker">
+        <option value="RO">Romaji</option>
+        <option value="EN">English</option>
+        <option value="KA">Kana</option>
+        <option value="KJ">Kanji</option>
+      </select>
+    </div>
+
+    <div id="card-display">
+      <div id="display-main">a</div>
+      <div id="display-secondary">b</div>
+    </div>
+
+    <div id="button-host">
+      <button id="button-randomize">🔀</button>
+      &nbsp; &nbsp; &nbsp; 
+      <button id="button-back">Back</button>
+      <button id="button-next">Next</button>
+    </div>
+  </body>
+</html>
