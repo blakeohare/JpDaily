@@ -122,7 +122,9 @@
 
   let initialize = () => {
     activeSet = sets.filter(set => set.id === ui.setPicker.value)[0];
+    activeSide = Array.from(ui.sidePicker.children).filter(o => o.value)[0].value;
     onRandomize();
+    
   };
 
   let reloadDisplay = () => {
