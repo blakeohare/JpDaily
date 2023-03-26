@@ -59,10 +59,7 @@
     let getRnd = getTodayRandom(activeSet);
     let cards = [...activeSet.words];
     shuffleList(cards, getRnd);
-    activeCards = [];
-    for (let i = 0; i < DAILY_LIMIT; i++) {
-      activeCards.push(cards[i]);
-    }
+    activeCards = cards.slice(0, DAILY_LIMIT);
     shuffleList(activeCards, () => Math.random());
     isFlipped = false;
     reloadDisplay()
@@ -148,7 +145,7 @@
       secondary = card.KA;
     } else if (activeSide === 'RO') {
       primary = card.EN;
-      seondary = card.KJ + ' (' + card.KA + ')';
+      secondary = card.KJ + ' (' + card.KA + ')';
     } else {
       throw new Error();
     }
