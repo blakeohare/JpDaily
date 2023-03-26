@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JP Daily</title>
-    <script src="jpdaily.js"></script>
-    <script src="wordbank.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="jpdaily.js?cachebreak=<?php echo time(); ?>"></script>
+    <script src="wordbank.js?cachebreak=<?php echo time(); ?>"></script>
+    <link rel="stylesheet" href="style.css?cachebreak=<?php echo time(); ?>">
   </head>
   <body>
 
