@@ -122,7 +122,10 @@
 
   let initialize = () => {
     activeSet = sets.filter(set => set.id === ui.setPicker.value)[0];
-    activeSide = Array.from(ui.sidePicker.children).filter(o => o.value)[0].value;
+    let sides = Array.from(ui.sidePicker.children).filter(o => o.value);
+    shuffleList(sides, getTodayRandom('picker'));
+    activeSide = sides[0].value;
+    sides[0].selected = true;
     onRandomize();
     
   };
