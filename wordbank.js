@@ -22,7 +22,7 @@ const getWordBank = () => (() => {
     }
   };
 
-  return [
+  let output = [
     createSet('Daily Nouns', 'daily_nouns', [
       m('analysis', 'bunseki', 'ぶんせき', '分析'),
       m('effort, endeavor', 'doryoku', 'どりょく', '努力'),
@@ -190,7 +190,19 @@ const getWordBank = () => (() => {
       coto1('zeijakusei', '脆弱性', 'ぜいじゃくせい', 'Vulnerability'),
     ]),
   ];
-  
+
+  let allWords = [];
+  output.forEach(set => {
+    set.words.forEach(word => {
+      allWords.push({ ...word }); // id value is overwritten by createSet
+    });
+  });
+
+  return [
+    createSet('Everything Combined', 'everything', allWords),
+    ...output,
+  ];
+
   // TODO: https://cotoacademy.com/japanese-it-vocabulary/
 
 })();
